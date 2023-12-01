@@ -1,0 +1,146 @@
+html {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.body {
+    background-color: #f1f1f1;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    height: 340vh;
+
+    margin: 0;
+}
+
+p {
+    color: #3b3b3b;
+    font-size: 18px;
+
+    line-height: 24px;
+
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100vw;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.background {
+    background-image: url("images/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.4;
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.gradient-line {
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #ffc93c 13%, #f997f7 37%, #fb7216 61%, #1bbc5c 86%);
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 34px;
+}
+
+.contact-us {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+
+    opacity: 0;
+}
+
+.section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+
+    padding-top: 34px;
+}
+
+img {
+    // max-width: 100%;
+    display: block;
+}
+
+.logo {
+    img {
+        max-height: 40px;
+        margin-bottom: -12px;
+    }
+}
+
+.gif-emblem {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: fixed;
+
+    z-index: 100;
+
+    height: 100vh;
+}
+
+.gif-item {
+    height: 26vh;
+
+    position: relative;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.coming-soon {
+    border-radius: 10px;
+    background: var(--Color-Linear, linear-gradient(92deg, #A18DFA -1.39%, #BB88E4 24.25%, #E289BC 45.78%, #F193A6 67.51%, #8895D8 86.15%, #9389F7 105.21%));
+
+    margin-top: 64px;
+    height: 60px;
+
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
