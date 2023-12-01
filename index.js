@@ -53,3 +53,16 @@ gsap.to(".background", {
     opacity: 1,
     ease: "none"
 });
+
+// .scroll-down - with scroll, change opacity from 100 to 0
+gsap.to(".scroll-down", {
+    scrollTrigger: {
+        trigger: ".scroll-down",
+        start: "top",
+        end: "200%",
+        scrub: true,
+        scrub: 0.2,
+    },
+    opacity: 0,
+    ease: "none"
+});
