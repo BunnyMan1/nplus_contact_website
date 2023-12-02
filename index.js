@@ -1,5 +1,7 @@
 // gsap.registerPlugin(ScrollTrigger)
 
+const isMobile = window.innerWidth < 600;
+
 gsap.to("#gif-n", {
     scrollTrigger: {
         trigger: "#gif-n",
@@ -9,7 +11,9 @@ gsap.to("#gif-n", {
         scrub: 0.2,
     },
     rotation: -180, // Rotate the image 360 degrees
-    x: () => -((window.innerWidth / 2) - (document.getElementById('gif-n').clientWidth / 2)),
+    x: isMobile
+        ? -((window.innerWidth / 1.1) - (document.getElementById('gif-n').clientWidth))
+        : () => -((window.innerWidth / 2) - (document.getElementById('gif-n').clientWidth / 2) + 16),
     scale: 1.5,
     ease: "none"
 });
@@ -23,7 +27,9 @@ gsap.to("#gif-plus", {
         scrub: 0.2,
     },
     rotation: 180, // Rotate the image 360 degrees
-    x: () => (window.innerWidth / 2) - (document.getElementById('gif-plus').clientWidth / 2),
+    x: isMobile
+        ? () => (window.innerWidth / 1.1) - (document.getElementById('gif-plus').clientWidth)
+        : () => (window.innerWidth / 2) - (document.getElementById('gif-plus').clientWidth / 2) + 16,
     scale: 1.5,
     ease: "none"
 });
@@ -42,7 +48,19 @@ gsap.to(".contact-us", {
 });
 
 // .background - with scroll, change opacity from 0 to 100
-gsap.to(".background", {
+// gsap.to(".background", {
+//     scrollTrigger: {
+//         trigger: ".background",
+//         start: "top",
+//         end: "max",
+//         scrub: true,
+//         scrub: 0.2,
+//     },
+//     opacity: 0.8,
+//     ease: "none"
+// });
+
+gsap.to(".bg-top-right", {
     scrollTrigger: {
         trigger: ".background",
         start: "top",
@@ -50,7 +68,19 @@ gsap.to(".background", {
         scrub: true,
         scrub: 0.2,
     },
-    opacity: 1,
+    height: "26%",
+    ease: "none"
+});
+
+gsap.to(".bg-bottom-left", {
+    scrollTrigger: {
+        trigger: ".background",
+        start: "top",
+        end: "max",
+        scrub: true,
+        scrub: 0.2,
+    },
+    height: "26%",
     ease: "none"
 });
 

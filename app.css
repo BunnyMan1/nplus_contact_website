@@ -41,11 +41,7 @@ a:hover {
 }
 
 .background {
-  background-image: url("images/bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4;
+  opacity: 0.6;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -56,11 +52,37 @@ a:hover {
   z-index: -1;
 }
 
+.bg-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 50%;
+}
+@media (max-width: 600px) {
+  .bg-top-right {
+    height: 36%;
+  }
+}
+
+.bg-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 50%;
+}
+@media (max-width: 600px) {
+  .bg-bottom-left {
+    height: 32%;
+  }
+}
+
 .gradient-line {
   width: 100%;
   height: 1px;
   background-color: transparent;
-  background-image: linear-gradient(90deg, #ffc93c 13%, #f997f7 37%, #fb7216 61%, #1bbc5c 86%);
+  background-image: linear-gradient(90deg, #ffc93c 13%, #f997f7 48%, #fb7216 87%, #1bbc5c 100%);
   flex: 1;
   margin-left: auto;
   margin-right: auto;
@@ -73,10 +95,15 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  width: 100%;
+  width: 50%;
   opacity: 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 600px) {
+  .contact-us {
+    width: 76%;
+  }
 }
 
 .section {
@@ -119,6 +146,11 @@ img {
   width: auto;
   height: 100%;
 }
+@media (max-width: 600px) {
+  .gif-item {
+    height: 20vh;
+  }
+}
 
 .coming-soon {
   border-radius: 10px;
@@ -140,6 +172,7 @@ img {
 }
 .scroll-down p {
   font-weight: 600;
+  font-size: 36px;
   color: #A18DFA;
   text-align: center;
 }
